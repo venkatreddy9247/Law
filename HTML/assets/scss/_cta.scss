@@ -1,0 +1,141 @@
+
+
+/*=========================
+    7. CTA css 
+==========================*/
+.cta-area-one{
+    position: relative;
+    margin-bottom: -320px;
+    z-index: 2;
+}
+.cta-wrapper-one{
+    & .cta-item{
+        position: relative;
+        padding: 70px 70px;
+        box-shadow: 0px 10px 60px 0px rgba(22, 37, 66, 0.1);
+        z-index: 1;
+        @media #{$xs}{
+            padding: 70px 30px;
+        }
+        &:hover{
+            & .cta-overlay{
+                &:after{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+            & .cta-content{
+                & h2,
+                & p{
+                    color: $white;
+                }
+            }
+        }
+        & .cta-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            @include transition(.3s);
+            &:before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(22, 37, 66, 0.8);
+            }
+            &:after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                visibility: visible;
+                opacity: 1;
+                @include transition(.3s);
+            }
+        }
+        & .cta-content{
+            & span.sub-title{
+                margin-bottom: 15px;
+            }
+            & h2{
+                margin-bottom: 25px;
+            }
+            & p{
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+.cta-wrapper-minus{
+    z-index: 2;
+    margin-top: -90px;
+}
+.cta-bottom-minus{
+    margin-bottom: -90px;
+    z-index: 2;
+}
+.cta-wrapper-two{
+    position: relative;
+    background-color: $theme-color;
+    padding: 50px 70px;
+    & .cta-content-box{
+        @media #{$xm}{
+            margin-bottom: 20px;
+        }
+        & h3{
+            font-size: 35px;
+            color: $white;
+            @media #{$lg}{
+                font-size: 32px;
+            }
+        }
+    }
+    & .button{
+        & .main-btn{
+            margin-left: 5px;
+            @media #{$lg}{
+                padding: 13px 20px;
+            }
+            &.filled-btn{
+                border-color: $white;
+                color: $white;
+                &:hover{
+                    background-color: $heading-color;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.cta-wrapper-three{
+    & .cta-content-box{
+        & .button{
+            & .main-btn{
+                margin-left: 5px;
+                margin-right: 5px;
+                &.filled-btn{
+                    color: $white;
+                    border-color: rgba(255, 255, 255, 0.10);
+                    &:hover{
+                        color: $white;
+                        border-color: $theme-color;
+                        &:before{
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  

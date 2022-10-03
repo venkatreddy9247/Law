@@ -1,0 +1,203 @@
+
+
+/*=========================
+   6. Features css 
+==========================*/
+
+.container-fluid-custom{
+    padding-left: 70px;
+    padding-right: 70px;
+    @media #{$lg}{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media #{$xm}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.features-wrapper-one{
+    border-bottom: 1px solid rgba(4, 13, 26, 0.1);
+    border-top: none;
+    @media #{$lg}{
+        border: none;
+    }
+    @media #{$xm}{
+        border: none;
+    }
+    & .features-column{
+        flex: 0 0 20%;
+        max-width: 20%;
+        &:nth-child(odd){
+            border-right: 1px solid rgba(4, 13, 26, 0.1);
+            border-left: 1px solid rgba(4, 13, 26, 0.1);
+        }
+        @media #{$lg}{
+            flex: 0 0 50%;
+            max-width: 50%;
+            &:nth-child(odd){
+                border: none;
+            }
+        }
+        @media #{$xm}{
+            &:nth-child(odd){
+                border: none;
+            }
+        }
+        @media #{$md}{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        @media #{$xs}{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+.features-item-one{
+    position: relative;
+    padding: 60px 50px;
+    z-index: 1;
+    @media #{$lp}{
+        padding: 40px 20px;
+    }
+    @media #{$lg}{
+        border: 1px solid rgba(4, 13, 26, 0.1);
+    }
+    @media #{$xm}{
+        border: 1px solid rgba(4, 13, 26, 0.1);
+    }
+    @media #{$xs}{
+        padding: 40px 20px;
+        margin-bottom: 20px;
+    }
+    &:hover{
+        box-shadow: 0px 10px 60px 0px rgba(22, 37, 66, 0.8);
+        border-color: transparent;
+        & .item-bg{
+            &:before{
+                visibility: visible;
+                opacity: 1;
+            }
+            &:after{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        & .content{
+            & h4, & p{
+                color: $white;
+            }
+            & .icon-btn{
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+    }
+    & .item-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(22, 37, 66, 0.85);
+            visibility: hidden;
+            opacity: 0;
+            @include transition(.4s);
+        }
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            visibility: visible;
+            opacity: 1;
+            z-index: -1;
+            @include transition(.3s);
+        }
+    }
+    & .icon{
+        margin-bottom: 20px;
+        & i{
+            font-size: 75px;
+            line-height: 1;
+            @extend %link-color;
+        }
+    }
+    & .content{
+        & h4{
+            margin-bottom: 10px;
+        }
+        & p{
+            margin-bottom: 25px;
+        }
+        & .icon-btn{
+            background-color: rgba(22, 37, 66, 0.07);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+    }
+}
+.features-content-box-two{
+    margin-left: 70px;
+    @media #{$lg}{
+        margin-left: 0px;
+    }
+    @media #{$xm}{
+        margin-left: 0px;
+    }
+}
+.features-item-two{
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(22, 37, 66, 0.07);
+    margin-bottom: 35px;
+    &:hover{
+        & .content{
+            & .icon-btn{
+                background-color: $heading-color;
+                color: $white;
+            }
+        }
+    }
+    & .icon{
+        margin-right: 30px;
+        & i{
+            font-size: 55px;
+            line-height: 1;
+            color: $theme-color;
+        }
+    }
+    & .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .icon-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            background-color: rgba(22, 37, 66, 0.07);
+            @include transition(.3s);
+        }
+    }
+}
+  

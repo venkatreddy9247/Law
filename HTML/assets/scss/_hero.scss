@@ -1,0 +1,227 @@
+
+/*=========================
+    3. Hero Css
+==========================*/
+.hero-wrapper-one{
+    & .single-slider{
+        padding: 220px 0 145px;
+        &:after{
+            background-color: rgba(22, 37, 66, 0.6);
+        }
+    }
+    & .hero-content{
+        & h1{
+            font-size: 110px;
+            line-height: 120px;
+            color: $white;
+            margin-bottom: 20px;
+            @media #{$xs}{
+                font-size: 42px;
+                line-height: 50px;
+            }
+        }
+        & span.span{
+            color: $white;
+            display: block;
+            margin-bottom: 15px;
+            &:before{
+                display: inline-block;
+                content: '';
+                width: 50px;
+                height: 3px;
+                background-color: $white;
+                vertical-align: middle;
+                margin-right: 30px;
+            }
+        }
+        & h4{
+            font-family: $karla;
+            color: $white;
+            margin-bottom: 35px;
+        }
+        & ul.button{
+            & li{
+                display: inline-block;
+                &:last-child{
+                    margin-left: 5px;
+                }
+                & .main-btn{
+                    &.filled-btn{
+                        border-color: rgba(255, 255, 255, 0.102);
+                        color: rgba(255, 255, 255, 0.30);
+                        &:hover{
+                            border-color: $theme-color;
+                            color: $white;
+                            &:before{
+                                background-color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.hero-content-left{
+            text-align: left;
+        }
+        &.hero-content-right{
+            text-align: right;
+        }
+        &.hero-content-center{
+            text-align: center;
+        }
+    }
+}
+.hero-slider-one{
+    & .slick-arrow{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        cursor: pointer;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        @include transition(.3s);
+        &.next{
+            right: 160px;
+            @media #{$lp}{
+                right: 30px;
+            }
+        }
+        &.prev{
+            left: 160px;
+            @media #{$lp}{
+                left: 30px;
+            }
+        }
+        &:hover{
+            background-color: $white;
+            color: $heading-color;
+        }
+    }
+}
+
+.hero-wrpper-two{
+    & .hero-content{
+        padding: 277px 0 178px;
+        & h1,& p,& span.span{
+            color: $white;
+        }
+        & h1{
+            font-size: 75px;
+            line-height: 85px;
+            margin-bottom: 25px;
+            @media #{$xs}{
+                font-size: 42px;
+                line-height: 55px;
+            }
+        }
+        & span.span{
+            display: block;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        & p{
+            margin-bottom: 33px;
+            &.experience{
+                margin-bottom: 0px;
+                & i{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .main-btn{
+            &:hover{
+                color: $heading-color;
+            }
+            &:before{
+                background-color: $white;
+            }
+        }
+        & .hero-lawyers-search{
+            margin-bottom: 23px;
+            & .form_control{
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $frankruhi;
+                &::placeholder{
+                    color: $heading-color;
+                }
+            }
+            & .main-btn{
+                @media #{$lg}{
+                    padding: 13px 25px;
+                }
+                @media #{$xm}{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .hero-img {
+        margin-right: -230px;
+        position: absolute;
+        bottom: 0;
+        @media #{$lp}{
+            margin-right: 0px;
+        }
+        @media #{$lg}{
+            display: none;
+        }
+        @media #{$xm}{
+            display: none;
+        }
+    }
+}
+
+.breadcrumbs-area{
+    position: relative;
+    padding: 200px 0 135px;
+    &.bg-with-overlay{
+        background-color: rgba(22, 37, 66, 0.5);
+    }
+    & .page-title{
+        & h1{
+            color: $white;
+            margin-bottom: 5px;
+            font-size: 65px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            @media #{$md}{
+                font-size: 42px;
+                line-height: 55px;
+            }
+            @media #{$xs}{
+                font-size: 32px;
+                line-height: 45px;
+            }
+        }
+        & .breadcrumbs-link{
+            & li{
+                display: inline-block;
+                color: $white;
+                &:last-child{
+                    &:after{
+                        display: none;
+                    }
+                }
+                &::after{
+                    display: inline-block;
+                    content: '\f105';
+                    margin-left: 15px;
+                    margin-right: 10px;
+                    font-weight: 400;
+                    font-family: 'Font Awesome 5 Pro';
+                }
+                & a{
+                    color: $white;
+                }
+            }
+        }
+    }
+}

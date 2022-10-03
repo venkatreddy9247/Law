@@ -1,0 +1,133 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?bd9449239329d33705eec5cf6735aee8") format("truetype"),
+url("./flaticon.woff?bd9449239329d33705eec5cf6735aee8") format("woff"),
+url("./flaticon.woff2?bd9449239329d33705eec5cf6735aee8") format("woff2"),
+url("./flaticon.eot?bd9449239329d33705eec5cf6735aee8#iefix") format("embedded-opentype"),
+url("./flaticon.svg?bd9449239329d33705eec5cf6735aee8#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "balance": "\f101",
+    "darts": "\f102",
+    "guarantee": "\f103",
+    "payment": "\f104",
+    "support": "\f105",
+    "user": "\f106",
+    "right-quote": "\f107",
+    "libra": "\f108",
+    "marijuana": "\f109",
+    "bail": "\f10a",
+    "traffic-lights": "\f10b",
+    "gavel": "\f10c",
+    "justice": "\f10d",
+    "civil-right": "\f10e",
+    "contract": "\f10f",
+    "stethoscope": "\f110",
+    "courthouse": "\f111",
+    "building": "\f112",
+    "recession": "\f113",
+    "power-plug": "\f114",
+    "house": "\f115",
+    "judge": "\f116",
+    "insurance": "\f117",
+    "right-quote-1": "\f118",
+    "auction": "\f119",
+    "open": "\f11a",
+    "call": "\f11b",
+);
+
+.flaticon-balance:before {
+    content: map-get($flaticon-map, "balance");
+}
+.flaticon-darts:before {
+    content: map-get($flaticon-map, "darts");
+}
+.flaticon-guarantee:before {
+    content: map-get($flaticon-map, "guarantee");
+}
+.flaticon-payment:before {
+    content: map-get($flaticon-map, "payment");
+}
+.flaticon-support:before {
+    content: map-get($flaticon-map, "support");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-right-quote:before {
+    content: map-get($flaticon-map, "right-quote");
+}
+.flaticon-libra:before {
+    content: map-get($flaticon-map, "libra");
+}
+.flaticon-marijuana:before {
+    content: map-get($flaticon-map, "marijuana");
+}
+.flaticon-bail:before {
+    content: map-get($flaticon-map, "bail");
+}
+.flaticon-traffic-lights:before {
+    content: map-get($flaticon-map, "traffic-lights");
+}
+.flaticon-gavel:before {
+    content: map-get($flaticon-map, "gavel");
+}
+.flaticon-justice:before {
+    content: map-get($flaticon-map, "justice");
+}
+.flaticon-civil-right:before {
+    content: map-get($flaticon-map, "civil-right");
+}
+.flaticon-contract:before {
+    content: map-get($flaticon-map, "contract");
+}
+.flaticon-stethoscope:before {
+    content: map-get($flaticon-map, "stethoscope");
+}
+.flaticon-courthouse:before {
+    content: map-get($flaticon-map, "courthouse");
+}
+.flaticon-building:before {
+    content: map-get($flaticon-map, "building");
+}
+.flaticon-recession:before {
+    content: map-get($flaticon-map, "recession");
+}
+.flaticon-power-plug:before {
+    content: map-get($flaticon-map, "power-plug");
+}
+.flaticon-house:before {
+    content: map-get($flaticon-map, "house");
+}
+.flaticon-judge:before {
+    content: map-get($flaticon-map, "judge");
+}
+.flaticon-insurance:before {
+    content: map-get($flaticon-map, "insurance");
+}
+.flaticon-right-quote-1:before {
+    content: map-get($flaticon-map, "right-quote-1");
+}
+.flaticon-auction:before {
+    content: map-get($flaticon-map, "auction");
+}
+.flaticon-open:before {
+    content: map-get($flaticon-map, "open");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
